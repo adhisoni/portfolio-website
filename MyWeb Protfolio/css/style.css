@@ -1,0 +1,580 @@
+@import url(//db.onlinewebfonts.com/c/72c75860d89e91a517dfb1e7d308c180?family=Courier+New);
+@import url(//db.onlinewebfonts.com/c/623c7118249e082fe87a78e08506cb4b?family=Segoe+UI);
+@import url(//db.onlinewebfonts.com/c/702d8433e65d57e2612d01f1db078242?family=Candara);
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+
+
+.body{
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+
+.logo{
+    font-family: "Candara", sans-serif;
+    font-size: 30px;
+}
+
+.logo > a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.hamburger{
+    width: 25px;
+    cursor: pointer;
+}
+
+
+/*---------------------------- starting-intro ----------------------*/
+
+
+.intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #161618;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+}
+
+.intro-slider{
+    background-color: rgb(71, 71, 71);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    transform: translateY(100%);
+}
+
+.intro-text{
+    font-family: "Candara", sans-serif;
+    font-size: 3rem;
+    color: white;
+}
+
+.intro-hide{
+    background-color: #161618;
+    overflow: hidden;
+}
+
+.intro-hide span{
+    display: inline-block;
+    transform: translateY(100%);
+
+}
+
+
+
+
+
+
+
+
+
+/*-------------------------- menu nav -----------------------------*/
+
+
+.menu-nav{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    /* background-color:  #161618; */
+    top: 0;
+    left: 0;
+    z-index: 3;
+    opacity: 0;
+    pointer-events: none;
+    animation: menu-nav-close 0.5s ease forwards;
+}
+
+
+/*------------------------------- nav-left -----------------------------------*/
+
+
+
+.nav-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:  #161618;
+    width: 70%;
+    height: 100%;
+}
+
+.nav-left-links{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.nav-left-links h1{
+    font-size: 65px;
+    padding: 10px 40px;
+    background-color: white;
+    font-family: "Candara", sans-serif;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.nav-left-links h1:hover{
+    background-color: rgb(151, 151, 151);
+}
+
+.nav-left-links a{
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+
+/* ----------------------------------nav-right -------------------------------*/
+
+
+
+
+.nav-right{
+    width: 30%;
+    height: 100%;
+    background-color: #222224;
+    right: 0;
+    position: fixed;
+}
+
+.nav-right-inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+    font-family: "Candara", sans-serif;
+    color: white;
+    gap: 30px;
+}
+
+.nav-right-tittle{
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.input-detail{
+    width: 100%;
+}
+
+.input-detail label{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.input-detail input{
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.input-detail input:hover{
+    background-color: rgb(138, 138, 138);
+}
+
+
+.nav-right-btn{
+    font-size: 30px;
+    color: white;
+    background-color: #161618;
+    border: none;
+    border-radius: 3px;
+    padding: 4% 38%;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.nav-right-btn:hover{
+    background-color: rgb(46, 46, 46);
+}
+
+
+
+
+
+/*------------------------------ logo and Animations ----------------------------------*/
+
+
+.nav-logo{
+    font-family: "Candara", sans-serif;
+    font-size: 30px;
+    position: absolute;
+    left: 10vw;
+    top: 11px;
+    color: white;
+}
+
+.nav-logo > a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav-hamburger{
+    width: 25px;
+    position: absolute;
+    color: white;
+    top: 20px;
+    right: 79px;
+    cursor: pointer;
+    transform: translateX(-75px);
+    animation: nav-hamburger-close 0.5s ease forwards;
+    animation-delay: 1000ms;
+}
+
+
+
+@keyframes menu-nav-open {
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+
+
+
+@keyframes menu-nav-close {
+    0%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+@keyframes nav-hamburger {
+    to{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes nav-hamburger-close {
+    
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(-75px);
+    }
+}
+
+
+/*----------------------------- JavaScript toggle Classes ---------------------------*/
+
+
+
+.open{
+    opacity: 1;
+    pointer-events: all;
+    animation: menu-nav-open 0.5s ease forwards;
+}
+
+.hamburger-open{
+    animation: nav-hamburger 0.5s ease forwards;
+}
+
+
+.overflow-body{
+    overflow: hidden;
+}
+
+.fade{
+    opacity: 1!important;
+}
+
+
+
+/*-------------------------- header and social --------------------------*/
+
+
+
+header{
+    width: 80%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    background: white;
+    height: 60px;
+    z-index: 2;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.social > a >img{
+    width: 25px;
+    transition: all 0.3s ease-in-out;
+}
+
+.social > a >img:hover{
+    opacity: 0.5;
+}
+
+.social{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 25px;
+    position: absolute;
+    right: 0;
+}
+
+.home-section{
+    margin-top: 20%!important;
+    margin-bottom: 10%;
+}
+
+.inner-content{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.hello-world{
+    font-size: 65px;
+}
+
+
+.content{
+    display: flex;
+    margin-top: 150px;
+    margin-left: 80px;
+    position: relative;
+}
+
+
+
+
+/*------------------------- More About Me --------------------------*/
+
+.more-about-js{
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+
+.more-about{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.more-about-margin{
+    margin-top: 25%;
+}
+
+.more-about-tittle{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 45px;
+    position: absolute;
+    left: 0;
+}
+
+.more-about-p{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    margin-left: 10%;
+}
+
+
+.achievement{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.achievement > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.achievement h1{
+    font-size: 45px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.achievement p{
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+
+/*------------------------- marketing -----------------------------------*/
+
+.marketing{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.marketing-inner{
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100%;
+}
+
+.marketing-tittle{
+    font-size: 180px;
+    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.3));
+    color: white;
+    font-family: "Candara", sans-serif;
+}    
+
+.marketing-cat{
+    position: absolute;
+    width: 385px;
+    transform: translate(88%, -2%);
+}
+
+
+/*------------------------------- what i do ----------------------*/
+
+.what-i-do{
+    height: 90vh;
+    width: 100%;
+}
+
+.what-i-do-tittle{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 60px;
+}
+
+.what-i-do-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    height: 60%;
+    margin-top: 8%;
+}
+
+.what-i-do-content h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.what-i-do-content p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+}
+
+.margin-top{
+    top: 180px;
+}
+
+/*-------------------------------- creativity -------------------------------*/
+
+
+.creativity-tea{
+    position: absolute;
+    width: 420px;
+    transform: translate(70%, 7%);
+}
+
+
+/*------------------------- productivity ---------------------------------*/
+
+.productivity-duck{
+    position: absolute;
+    width: 380px;
+    transform: translate(87%, -16%);
+
+}
+
+
+
+/*----------------------------- Let's Collab --------------------------*/
+
+.collab-inner-text{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 12%;
+    margin-left: 15px;
+}
+
+.collab-inner-text p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+}
+
+.footer{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+
+
+
+
